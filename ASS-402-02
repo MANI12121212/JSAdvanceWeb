@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+  
+<head>
+    <title>
+        How to create an image element
+        dynamically using JavaScript ?
+    </title>  
+    <style>
+        body{
+            text-align: center;
+        }
+        h1{
+            color: green;
+        }
+        #GFG_U{
+            font-size: 15px;
+            font-weight: bold ;
+        }
+        #GFG_DOWN{
+            color: green;
+            font-size: 35px;
+        }
+    </style>  
+</head>
+  
+<body id = "body" >
+      
+    <h1   >
+        Geekster
+    </h1>
+      
+    <p id = "GFG_UP" >
+    </p>
+      
+    <button onclick = "GFG_Fun()">
+        click here
+    </button>
+      
+    <p id = "GFG_DOWN" >
+    </p>
+      
+    <script>
+        var up = document.getElementById('GFG_UP');
+        up.innerHTML = "Click on the button to add image element";
+        var down = document.getElementById('GFG_DOWN');
+          
+        function GFG_Fun() {
+            var img = document.createElement('img');
+            img.src =
+' https://mechomotive.com/wp-content/uploads/2021/08/Geekster_logo_full-1024x264-1.png';
+            document.getElementById('body').appendChild(img);
+            down.innerHTML = "Image Element Added.";
+        }
+    </script>
+</body>
+  
+</html>
